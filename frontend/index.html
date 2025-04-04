@@ -6,6 +6,7 @@
     <title>Table</title>
     <script type="module" src="./main.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/eebf078d82.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <h1>Hex Map Generator</h1>
@@ -40,9 +41,23 @@
     <div id="canvasContainer">
         <canvas id="canvas" height="500px" width="500px" style="border:1px solid lightgrey;"></canvas>
     </div>
-    <div>
+    <div id="buttonContainer">
         <button id="save">Save Layout</button>
         <button id="download">Download</button>
+    </div>
+    <div id="selectionBoard">
+        <label>
+            <input type="radio" name="board">
+            <span><i class="fa-solid fa-landmark"></i></span>
+        </label>
+        <label>
+            <input type="radio" name="board">
+            <span><i class="fa-solid fa-anchor"></i></span>
+        </label>
+        <label>
+            <input type="radio" name="board">
+            <span><i class="fa-solid fa-house"></i></span>
+        </label>
     </div>
 </body>
 </html>

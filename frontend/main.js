@@ -21,7 +21,6 @@ document.getElementById('submitButton').addEventListener('click', (e) =>{
     let map_height = 10;
     const colours = []
     const inputs = document.getElementById("map-details").elements;
-    console.log(inputs)
     for (let i=0; i<inputs.length; i++){
       if (inputs[i].id === "height"){
         map_height = +inputs[i].value
@@ -89,7 +88,7 @@ function drawHexagon(hex, a, r) {
   ctx.textAlign = "center";
   ctx.fillStyle= "black";
   ctx.font = "7px Arial";
-  ctx.fillText(hex['coords'], hex['x'],hex['y']);
+  ctx.fillText(hex['text'], hex['x'],hex['y']);
 }
 
 
@@ -137,6 +136,7 @@ function generateMap(map_height, map_width, r,hex_width, colours){
           colour:col,
           coords:coord,
           corners:[],
+          text:coord,
           r:r
         })
         x+=Math.sqrt(3)*r;
